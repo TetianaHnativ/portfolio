@@ -1,0 +1,62 @@
+.wrapper {
+    padding: 30px;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.main-heading {
+    font-size: 35px;
+    text-align: center;
+}
+
+.tasks-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 500px);
+    justify-content: space-evenly;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.tasks-list li {
+    background-color: darkgoldenrod;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tasks-list a {
+    font-size: 25px;
+    color: white;
+}
+
+.tasks-list a:focus,
+.tasks-list a:hover {
+    color: yellow;
+}
+
+@media (max-width:768px) {
+    .wrapper {
+        padding: 30px 0;
+    }
+
+    .main-heading {
+        font-size: 30px;
+    }
+
+    .tasks-list {
+        grid-template-columns: repeat(auto-fill, 300px);
+    }
+
+    .tasks-list li {
+        padding: 10px;
+    }
+
+    .tasks-list a {
+        font-size: 20px;
+    }
+}
