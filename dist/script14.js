@@ -1,7 +1,9 @@
 import { addToList } from './script.js';
+/* Task 1, 3  */
 function FnArrayResult(data, fun) {
     return `[${data.join(", ")}] => [${fun(data).join(", ")}]`;
 }
+/* Task 4, 5  */
 function FnObjectResult(data, fun) {
     return `${JSON.stringify(data)} => ${JSON.stringify(fun(data))}`;
 }

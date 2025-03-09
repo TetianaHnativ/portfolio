@@ -13,8 +13,174 @@
     <div class="wrapper">
         <main>
             <h1 class="main-heading">Create a very helpful function, use it couple of times</h1>
+            <ul class="tasks-list solution-tasks-list">
+                <li>
+                    <h2 class="task-heading">Task 1</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                Global Scope: create a variable in the global scope, create a function and in the body
+                                of the function print this variable to the console <br>
+                                Function Scope: create a function, declare the change inside the function, then try to
+                                print this variable to the console inside the function, and outside the function <br>
+                                Block Scope: Create a function, write a block {} in the function inside which to declare
+                                the variable and print it to the console, then print this variable to the console
+                                outside the block and look at the result
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-1-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-heading">Task 2</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                In the showCarInfo function, output the name and model of the car object
+                                using the context via this, call the showCarInfo function using bind.
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-2-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-heading">Task 3</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Given</h3>
+                            <p>Code in which you need to find the error and fix it</p>
+                            <div class="code-examples">
+                                const cat = {<br>
+                                sound: 'meow',<br>
+                                greet: function() {<br>
+                                setTimeout(function() {<br>
+                                console.log(this.sound)<br>
+                                }, // write fix in this line of code<br>
+                                0)<br>
+                                }};<br>
+                                cat.greet(); // should produce "meow"
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                Output “meow”
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-3-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-heading">Task 4</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Given</h3>
+                            <p>
+                                An object in which it is necessary to rewrite the existing function to a switch so that
+                                it starts executing correctly
+                            </p>
+                            <div class="code-examples">
+                                const dog = { <br>
+                                sound: 'bark', <br>
+                                greet: function() { <br>
+                                setTimeout(function () { // fix code in this line <br>
+                                console.log(this.sound) <br>
+                                },0) <br>
+                                }} <br>
+                                dog.greet();
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                Output “bark”
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-4-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-heading">Task 5</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Given</h3>
+                            <p>
+                                Write an Anonymous function and assign its value to the variable convert, the function
+                                should accept a number that is the number of bytes and return a string with the
+                                converted bytes in MB, with two decimal places in the format "100.00 Mb" and call this
+                                function using call
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                The function accepts a number (bytes) and converts it to a string in MB format
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Examples</h3>
+                            <ul class="examples-list">
+                                <li>
+                                    10000 -> 0.01 Mb
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-5-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-heading">Task 6</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Given</h3>
+                            <p>
+                                Write a function logPersonNameAndInterests that will take an arbitrary number of string
+                                arguments and output the full name of Person using the call getFullName with the context
+                                Person, as well as a list of all his interests that come as arguments to this function
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                Call logPersonNameAndInterests with the context Person and a list of interests
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Examples</h3>
+                            <ul class="examples-list">
+                                <li>
+                                    ['sushi','hiking'] -> 'John Doe loves: sushi, hiking'
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-6-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </main>
     </div>
+    <script type="module" src="../dist/script.js"></script>
+    <script type="module" src="../dist/script18.js"></script>
 </body>
 
 </html>

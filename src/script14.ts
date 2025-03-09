@@ -1,5 +1,7 @@
 import { addToList } from './script.js';
 
+/* Task 4  */
+
 type Human = {
     age: number;
     city: string;
@@ -9,13 +11,19 @@ type User = {
     [name: string]: Human;
 }
 
+/* Task 5  */
+
 type Obj = {
     [keyName: string]: number;
 }
 
+/* Task 1, 3  */
+
 function FnArrayResult(data: any[], fun: (data: any[]) => any[]): string {
     return `[${data.join(", ")}] => [${fun(data).join(", ")}]`;
 }
+
+/* Task 4, 5  */
 
 function FnObjectResult(data: any, fun: (data: any) => any): string {
     return `${JSON.stringify(data)} => ${JSON.stringify(fun(data))}`;
