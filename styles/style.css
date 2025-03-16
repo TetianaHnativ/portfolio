@@ -18,9 +18,10 @@ main {
 }
 
 .tasks-list {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 500px);
-    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, 500px);
+    justify-content: center;
     gap: 50px;
     padding: 50px 0;
 }
@@ -88,7 +89,7 @@ main {
     }
 
     .tasks-list {
-        grid-template-columns: repeat(auto-fill, 300px);
+        grid-template-columns: repeat(auto-fit, 300px);
     }
 
     .tasks-list li {

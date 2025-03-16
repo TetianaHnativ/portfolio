@@ -13,8 +13,55 @@
     <div class="wrapper">
         <main>
             <h1 class="main-heading">Creating HOF (higher order function) and composition</h1>
+            <ul class="tasks-list solution-tasks-list">
+                <li>
+                    <h2 class="task-heading">Task 1</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Given</h3>
+                            <p>
+                                Write a higher-order function compose that will take an arbitrary number of functions as
+                                arguments and create a composition from them. Write a curry function (modifyArray) that
+                                will first take a function (modifyCondition) as an argument, and then take an array of
+                                strings (data) as an argument, the curry function should return the modified array
+                                according to the condition (modifyCondition) that came at the beginning of the curry
+                                function. Write compositions allToLower and capitalizeAllFirst using your own compose
+                                and modifyArray that will take an array of strings and return the result of the task
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                const testArray = ["CusTom", "Web", "aNd", "MoBile", "PlaTfoRms"];
+                            </p>
+                            <p>
+                                1. allToLower - takes testArray -> converts strings so that all characters are converted
+                                to lowercase 'Result: custom - web - and - mobile - platforms length: 39'
+                            </p>
+                            <p>
+                                2. capitalizeAllFirst - takes testArray -> converts strings so that only the first
+                                character is in uppercase, the rest in lowercase, combines them into one string with the
+                                symbol'-' -> outputs 'Result: Custom-Web-And-Mobile-Platforms length: 31'
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Examples</h3>
+                            <ul class="examples-list">
+                                <li>capitalizeAllFirst(arr) - 'Result: Custom-Web-And-Mobile-Platforms length: 31'</li>
+                                <li>allToLower(arr) - 'Result: custom - web - and - mobile - platforms length: 39'</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-1-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </main>
     </div>
+    <script type="module" src="../dist/script.js"></script>
+    <script type="module" src="../dist/script21.js"></script>
 </body>
 
 </html>
