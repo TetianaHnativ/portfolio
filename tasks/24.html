@@ -13,8 +13,87 @@
     <div class="wrapper">
         <main>
             <h1 class="main-heading">Create some classes, inherit them from some parent class</h1>
+            <ul class="tasks-list solution-tasks-list">
+                <li>
+                    <h2 class="task-heading">Task 1</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                1) Create a constructor function Calculator and add two methods sum(a,b) and
+                                subtract(a,b)
+                                to its prototype
+                            </p>
+                            <p>
+                                2) Create a constructor function AdvancedCalculator (inherits methods from Calculator)
+                                and
+                                add two methods multiply(a,b) and divide(a,b) to its prototype
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-1-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-heading">Task 1</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Given</h3>
+                            <p>
+                                Function for generating ID
+                            </p>
+                            <div class="code-examples">
+                                function generateId() { <br>
+                                return "_" + Math.random().toString(36).substr(2, 9);<br>
+                                }
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                1) Create a TodoItem class with fields (properties): id (generated in the constructor
+                                using a function), name, checked (default false). For the checked field, write a getter
+                                and setter (add validation: the field can only accept the boolean value true or false)
+                            </p>
+                            <p>
+                                2) Create a TodoList class with fields: id (generated in the constructor using a
+                                function), name, items (default empty array). Add the following methods: <br>
+                                <span>-</span> addItem - a method that adds elements to the array (you need to
+                                validate the TodoItem type) <br>
+                                <span>-</span> removeItemById - a method that removes an element from the array by id
+                                <br>
+                                <span>-</span> getItemById - a method that returns the TodoItem element from the
+                                array by id
+                            </p>
+                            <p>
+                                3) Create an instance of the TodoList class;
+                            </p>
+                            <p>
+                                4) Create 4 instances of the TodoItem class, add them to the TodoList and output an
+                                instance of the TodoList class to the console.
+                            </p>
+                            <p>
+                                5) Change the checked value of one TodoItem instance and output the TodoList to the
+                                console (this field in the items array should be updated)
+                            </p>
+                            <p>
+                                6) Remove 2 TodoItem instances from the TodoList and output the TodoList to the console
+                                (only 2 TodoItem instances should remain in the items array)
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-2-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </main>
     </div>
+    <script type="module" src="../dist/script.js"></script>
+    <script type="module" src="../dist/script24.js"></script>
 </body>
 
 </html>

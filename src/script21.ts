@@ -2,7 +2,7 @@ import { addToList } from './script.js';
 
 const task_21_Result_1: HTMLElement | null = document.getElementById("task-1-result");
 
-const arr = ["CusTom", "Web", "aNd", "MoBile", "PlaTfoRms"];
+const arr: string[] = ["CusTom", "Web", "aNd", "MoBile", "PlaTfoRms"];
 
 const lowerCase = (testArray: string[]): string[] => testArray.map(element => element.toLowerCase());
 
