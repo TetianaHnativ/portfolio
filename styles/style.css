@@ -45,6 +45,11 @@ main {
     color: white;
 }
 
+.tasks-list .external-link {
+    font-size: 15px;
+    color: rgb(65, 16, 16);
+}
+
 .tasks-list a:focus,
 .tasks-list a:hover {
     color: yellow;

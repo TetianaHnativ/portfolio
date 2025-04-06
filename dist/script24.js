@@ -107,6 +107,7 @@ class TodoList {
         return this._items.find(element => element.id === id) || "There are no items with this id";
     }
 }
+addToList(task_24_Result_2, () => "Look in the console", null);
 const todoList = new TodoList("my list");
 console.log(todoList);
 const todoItem1 = new TodoItem("todoItem1");

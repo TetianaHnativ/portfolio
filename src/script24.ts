@@ -173,7 +173,9 @@ class TodoList implements ITodoList {
     }
 }
 
-const todoList = new TodoList("my list");
+addToList(task_24_Result_2, () => "Look in the console", null);
+
+const todoList = new TodoList("my list"); 
 console.log(todoList);
 
 const todoItem1 = new TodoItem("todoItem1");
