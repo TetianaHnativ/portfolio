@@ -1,4 +1,3 @@
-import { ReducerType } from '../../../../node_modules/@reduxjs/toolkit/dist/index.js';
 import { addToList } from './script.js';
 
 /* Task 4 */

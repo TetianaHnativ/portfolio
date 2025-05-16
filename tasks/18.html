@@ -21,9 +21,9 @@
                             <h3 class="task-subtitle">Task</h3>
                             <p>
                                 Global Scope: create a variable in the global scope, create a function and in the body
-                                of the function print this variable to the console <br>
+                                of the function print this variable to the console <br />
                                 Function Scope: create a function, declare the change inside the function, then try to
-                                print this variable to the console inside the function, and outside the function <br>
+                                print this variable to the console inside the function, and outside the function <br />
                                 Block Scope: Create a function, write a block {} in the function inside which to declare
                                 the variable and print it to the console, then print this variable to the console
                                 outside the block and look at the result
@@ -58,14 +58,14 @@
                             <h3 class="task-subtitle">Given</h3>
                             <p>Code in which you need to find the error and fix it</p>
                             <div class="code-examples">
-                                const cat = {<br>
-                                sound: 'meow',<br>
-                                greet: function() {<br>
-                                setTimeout(function() {<br>
-                                console.log(this.sound)<br>
-                                }, // write fix in this line of code<br>
-                                0)<br>
-                                }};<br>
+                                const cat = {<br />
+                                sound: 'meow',<br />
+                                greet: function() {<br />
+                                setTimeout(function() {<br />
+                                console.log(this.sound)<br />
+                                }, // write fix in this line of code<br />
+                                0)<br />
+                                }};<br />
                                 cat.greet(); // should produce "meow"
                             </div>
                         </li>
@@ -91,13 +91,13 @@
                                 it starts executing correctly
                             </p>
                             <div class="code-examples">
-                                const dog = { <br>
-                                sound: 'bark', <br>
-                                greet: function() { <br>
-                                setTimeout(function () { // fix code in this line <br>
-                                console.log(this.sound) <br>
-                                },0) <br>
-                                }} <br>
+                                const dog = { <br />
+                                sound: 'bark', <br />
+                                greet: function() { <br />
+                                setTimeout(function () { // fix code in this line <br />
+                                console.log(this.sound) <br />
+                                },0) <br />
+                                }} <br />
                                 dog.greet();
                             </div>
                         </li>

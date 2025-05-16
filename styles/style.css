@@ -38,6 +38,7 @@ main {
     background-color: darkgoldenrod;
     padding: 20px;
     border-radius: 10px;
+    word-break: break-word;
 }
 
 .tasks-list a {
