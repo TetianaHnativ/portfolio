@@ -1,4 +1,4 @@
-import { addToList } from './script.js';
+import { addToList, taskResult, Album } from './script.js';
 
 const baseUrl = "https://jsonplaceholder.typicode.com";
 
@@ -13,12 +13,6 @@ interface User {
     company: object;
 }
 
-interface Album {
-    userId: number,
-    id: number,
-    title: string
-}
-
 function getData<T>(url: string, options?: RequestInit): Promise<T | null> {
     return fetch(url, options)
         .then(response => {
@@ -27,8 +21,8 @@ function getData<T>(url: string, options?: RequestInit): Promise<T | null> {
             }
             return response.json();
         })
-        .catch((error: any) => {
-            console.error(`Fetch error from ${url}: ${error.message || error}`);
+        .catch((error: unknown) => {
+            console.error(`Fetch error from ${url}: ${(error instanceof Error) ? error.message : error}`);
             return null;
         });
 }
@@ -94,12 +88,5 @@ getSpecifiedAlbums([1, 15, 0])
         console.log("Task 4. Results: ", results);
     })
 
-/* ------------------------------------------------------------ */
-
-function taskResult(...tasks: (HTMLElement | null)[]) {
-    tasks.forEach(task =>
-        task && addToList(task, (): string => "Dear user, please, look in the console", null)
-    );
-}
 
 taskResult(task_30_Result_1, task_30_Result_2, task_30_Result_4);

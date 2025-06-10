@@ -13,8 +13,201 @@
     <div class="wrapper">
         <main>
             <h1 class="main-heading">Get and Output Data from API Endpoint Using async/await with Fetch</h1>
+            <ul class="tasks-list solution-tasks-list">
+                <li>
+                    <h2 class="task-heading">Task 1</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Given</h3>
+                            <div class="code-examples">
+                                function fetchAlbums() { <br>
+                                fetch('
+                                <a class="external-link" target="_blank" rel="noopener noreferrer"
+                                    href="https://jsonplaceholder.typicode.com/users/1/albums">
+                                    https://jsonplaceholder.typicode.com/users/1/albums
+                                </a>
+                                ')<br>
+                                .then((response) => {<br>
+                                if (!response.ok) {<br>
+                                throw new Error(`Failed with status code: ${response.status}`);<br>
+                                }<br>
+
+                                return response.json();<br>
+                                })<br>
+                                .then((data) => {<br>
+                                console.log("Result: ", data);<br>
+                                })<br>
+                                .catch((error) => {<br>
+                                console.log("Request Error: ", error);<br>
+                                });<br>
+                                }<br>
+
+                                fetchAlbums();
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                Rewrite the function from Promise to async/await using fetch.
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-1-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-heading">Task 2</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Given</h3>
+                            <p>
+                                Public API for accessing the Star Wars universe database - SWAPI -
+                                <a class="external-link" target="_blank" rel="noopener noreferrer"
+                                    href="https://swapi.py4e.com">
+                                    https://swapi.py4e.com
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                Make a query to SWAPI to
+                                <a class="external-link" target="_blank" rel="noopener noreferrer"
+                                    href=" https://swapi.py4e.com/api/">
+                                    https://swapi.py4e.com/api/
+                                </a>
+                                and get a list of planets in the format: <br>
+                                [{ name: 'Tatooine', rotation_period: '23', ... }, { name: 'Alderaan',
+                                rotation_period: '24', ... }, ... ]
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-2-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-heading">Task 3</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Given</h3>
+                            <p>
+                                Search documentation -
+                                <a class="external-link" target="_blank" rel="noopener noreferrer"
+                                    href="https://swapi.py4e.com/documentation#search">
+                                    https://swapi.py4e.com/documentation#search
+                                </a>
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                Make a query to SWAPI to get a list of people with the name Skywalker, display the list
+                                in the format: <br>
+                                [{ name: 'Luke Skywalker', height: 172, ... },
+                                { name: 'Anakin Skywalker', height: 188, ... }, ...]
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-3-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-heading">Task 4</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                Write a fetchSWAPI function that will accept the final resource, make a request to SWAPI
+                                and return a response as an object.
+                                The fetchSWAPI function will take 2 parameters: <br>
+                                - resource - a string - the final resource (for example, 'planets/') or the full url to
+                                SWAPI (for example,
+                                <a class="external-link" target="_blank" rel="noopener noreferrer"
+                                    href="https://swapi.py4e.com/api/planets/1/">
+                                    https://swapi.py4e.com/api/planets/1/
+                                </a>
+                                ), in the function to check and build the final url<br>
+                                - throwError - a boolean value - whether to throw an error in case of an unsuccessful
+                                reverse. The default is false.
+                            </p>
+                            <p>The fetchSWAPI function should check whether the request was successful.
+                                In case of an error, it should be processed - the resource and error should be displayed
+                                in the console. Also, if throwError is true, then throw the error further.
+                                The function should return a parsed response object from the API.
+                                The function contains the root url to the SWAPI, adds the final resource and makes the
+                                request.
+                            </p>
+                            <p>
+                                After implementing the function, you need to test it by calling it several times with
+                                the parameters as indicated below and display the result of the requests -
+                                testFetchSWAPI.
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Examples</h3>
+                            <ul class="examples-list">
+                                <li>person - {name: "Luke Skywalker", height: "172", ...}</li>
+                                <li>film - {title: "A New Hope", episode_id: 4, ...}</li>
+                                <li>films/1001/ fetchSWAPI error Error: Failed with status code: 404</li>
+                                <li>film1001Id undefined</li>
+                                <li>
+                                    films/1101/ fetchSWAPI error Error: Failed with status code: 404 <br>
+                                    testFetchSWAPI error Error: Failed with status code: 404
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-4-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-heading">Task 5</h2>
+                    <ul>
+                        <li>
+                            <h3 class="task-subtitle">Task</h3>
+                            <p>
+                                Write a function that will use the previously written fetchSWAPI function, this function
+                                should make requests to get the data of a person with the specified name, and then,
+                                based on the received response, get the details of the movies in
+                                which the person appeared in parallel.
+                            </p>
+                            <p>
+                                The function should return an object with the person's name and a list of movie details
+                                in the format: <br>{name: '', movies: [{title: '', episode_id: '', ...}, ...]}
+                            </p>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Examples</h3>
+                            <ul class="examples-list">
+                                <li>
+                                    lukeFilms { name: "Luke Skywalker", films: [{ title: "A New Hope", episode_id: 4,
+                                    ... }] }
+                                </li>
+                                <li>
+                                    kenobiFilms { name: "Obi-Wan Kenobi", films: [{ title: "A New Hope", episode_id: 4,
+                                    ... }] }
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="task-subtitle">Result</h3>
+                            <ul class="results-list" id="task-5-result"></ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </main>
     </div>
+    <script type="module" src="../dist/script.js"></script>
+    <script type="module" src="../dist/script33.js"></script>
 </body>
 
 </html>
